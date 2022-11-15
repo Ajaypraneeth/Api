@@ -1,6 +1,6 @@
 .page{
-  padding-left: 90px;
-  padding-right: 90px;
+  padding-left: 100px;
+  padding-right: 100px;
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
@@ -40,7 +40,7 @@
   position: absolute;
   font-size:large;
   right:70px;
-  top: 20px;
+  top: 14px;
   
 } 
 .wrap {
@@ -72,7 +72,64 @@ tbody tr:nth-child(even) {
   border-radius: 5px;
   border: 1px;
 }
+.delete:hover {
+  color: red;
+  transition: 0.3s ease-in-out;
+}
 .down{
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 14px;
+  margin: 0 10px;
+  border: 0.5px solid #b5b5b4;
+  padding: 6px 10px;
+  color: #b5b5b4;
+}
+.one{
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 14px;
+  margin: 0 5px;
+  border: 0.5px solid #b5b5b4;
+  background-color: #aa8b1c;
+  color: #fefefe;
+  padding: 0 8px;
+}
+.two{
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 14px;
+  margin: 0 5px;
+  border: 0.5px solid #b5b5b4;
+  padding: 0 8px;
+}
+.three{
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 14px;
+  margin: 0 5px;
+  border: 0.5px solid #b5b5b4;
+  padding: 0 8px;
+}
+.next {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 14px;
+  margin: 0 10px;
+  border: 0.5px solid #b5b5b4;
+  padding: 2px 12px;
+}
+/* .down{
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
@@ -95,4 +152,4 @@ tbody tr:nth-child(even) {
   margin-bottom: 5px;
   margin-right: 10px;
   font-family: 'Lato';
-}
+} */

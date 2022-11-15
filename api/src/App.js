@@ -22,6 +22,20 @@ function App() {
   useEffect(() => {
     getQuote();
   }, []);
+   const deleteData = (id) => {
+     console.log(id, "asdutasyudf");
+     axios
+       .delete(`https://636ddafeb567eed48acb07be.mockapi.io/api/v1/users/${id}`)
+       .then(function (handleDelete) {
+           getQuote();
+
+         console.log(handleDelete);
+       })
+       .catch(function (err) {
+         console.log(err);
+       });
+   };
+
 
   return (
     <div>
@@ -77,9 +91,12 @@ function App() {
                         <GrView/></i>
                       <i className="edit px-3">
                        <BiEdit/> </i>
-                      <i className="delete px-3">
-                       <AiFillDelete/></i>
-                       </td>
+                       <button
+                        onClick={() => deleteData(id)}
+                        className="delete">
+                        <AiFillDelete/>
+                      </button>
+                      </td>
                   </tr>
                 </>
               );
@@ -87,11 +104,15 @@ function App() {
           )}
            </tbody>
         </table>
-        <button className="down px-3 py-1">Previous</button>
-        <button className="one m-2">1</button>
-        <button className="two m-2">2</button>
-        <button className="three m-2">3</button>
-        <button className="next px-3 py-1">Next</button>
+        <div className="container">
+          <div className="d-flex p-6 py-4 justify-content-end">
+            <button className="down">Previous</button>
+            <button className="one">1</button>
+            <button className="two">2</button>
+            <button className="three">3</button>
+            <button className="next">Next</button>
+          </div>
+        </div>
       </div>
     </div>
   );
