@@ -1,0 +1,98 @@
+.page{
+  padding-left: 90px;
+  padding-right: 90px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 22px;
+  background-color: #ededed;
+
+}
+.navbar{
+  padding-left: 40px;
+  padding-right: 55px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 18px;
+  color:#D3B24D;
+}
+.head {
+  font-family: "Lato";
+  font-style: normal;
+  font-size: 24px;
+  line-height: 22px;
+  margin-bottom: 40px;
+}
+.parent{
+  font-family: "Poppins";
+  font-size:14px;
+  position: relative;
+  padding:5px 20px;
+  border: none;
+  margin-right: 5px;
+  background-color: #eaeaea;
+  border-radius: 5px;
+}
+.child {
+  position: absolute;
+  font-size:large;
+  right:70px;
+  top: 20px;
+  
+} 
+.wrap {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 100px;
+  height: 50px;
+  background-color: #d3b24d;
+  color:white;
+}
+tbody tr:nth-child(odd) {
+  background-color:white;
+}
+tbody tr:nth-child(even) {
+  background-color:#FFEEBE
+}
+.line {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  border-radius: 50px;
+  height: 50px;
+  color:black;
+  border-radius: 5px;
+  border: 1px;
+}
+.down{
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 14px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  margin-left: 74%;
+}
+.one{
+  background-color: #D3B24D;
+
+}
+.next{
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 14px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  font-family: 'Lato';
+}
