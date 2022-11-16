@@ -1,0 +1,100 @@
+.background{
+  background-color: #F5F7F9;
+}
+.user{
+  padding: 25px;
+  height: 100vh;
+}
+.arrow {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 22px;
+    padding-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-image: url(./components/Vector.png);
+    background-repeat: no-repeat;
+  }
+  .arrow {
+    text-decoration: none;
+    color: black;
+    padding: 0 15px;
+  }
+  .arrow:hover {
+    color: #d3b24d;
+  }
+ 
+  .form{
+    margin-right: 75px;
+    margin-left: 25px;
+    margin-bottom: 50px;
+  }
+  .form input{
+    width: 100%;
+    padding: 15px 15px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #eaeaea;
+  }
+  .form select {
+    width: 100%;
+    padding: 15px 15px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #eaeaea;
+  }
+
+  .term {
+    margin-left: 0px;
+  }
+  .term input{
+    width: 100%;
+    padding: 15px 15px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #eaeaea;
+  }
+  .term textarea {
+    width: 100%;
+    padding: 15px 15px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #eaeaea;
+    resize: none;
+
+  }
+  .down {
+    padding-left: 400px;
+    border: none;
+    margin-top: 80px;
+  }
+  .add-btn {
+    font-family: "Lato";
+    width: 100px;
+    padding: 10px 25px;
+    border: 1px solid #d3b24d;
+    border-radius: 5px;
+    color: #d3b24d;
+    margin-left: 50px;
+    background-color: #fefefe;
+  }
+  .add-btn:hover {
+    background-color: #d3b24d;
+    color: #fefefe;
+    transition: 0.5s ease in out;
+  }
+  .cancel-btn{
+    font-family:"Lato";
+    padding: 10px 25px;
+    width: 100px;
+    border: 1px solid #d3b24d;
+    border-radius: 5px;
+    color: #d3b24d;
+    background-color: #fefefe;
+  } 

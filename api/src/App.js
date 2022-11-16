@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
+import { useNavigate } from "react-router";
 import { BsSearch } from "react-icons/bs";
 import { BiEdit } from "react-icons/bi";
 import { GrView } from "react-icons/gr";
@@ -8,6 +9,8 @@ import { AiFillDelete} from "react-icons/ai";
 
 function App() {
   const [datas, setDatas] = useState([]);
+  
+   let navigate = useNavigate([])
 
   const getQuote = async () => {
     try {
@@ -22,8 +25,12 @@ function App() {
   useEffect(() => {
     getQuote();
   }, []);
+
+   const newUser = () => {
+     navigate("/new");
+  };
    const deleteData = (id) => {
-     console.log(id, "asdutasyudf");
+     console.log(id, "");
      axios
        .delete(`https://636ddafeb567eed48acb07be.mockapi.io/api/v1/users/${id}`)
        .then(function (handleDelete) {
@@ -40,7 +47,9 @@ function App() {
   return (
     <div>
       <div className="page">
-        <h1 className="pt-4 pe-3 mb-5">Product Management</h1>
+        <h1 className="pt-4 pe-3">Product Management</h1>
+        <button onClick={newUser} className="New-user p-2">+ Add User
+          </button>
         <nav class="navbar navbar-light bg-light justify-content-between">
          <nav className="navbar">Services</nav>
          <input className="parent"
@@ -55,11 +64,11 @@ function App() {
               <th>SI no</th>
               <th>Name</th>
               <th>age</th>
-              <th>Mobile Number</th>
-              <th>Date Of Birth</th>
               <th>Email ID</th>
-              <th>Description</th>
               <th>Qualification</th>
+              <th>Date Of Birth</th>
+              <th>Mobile Number</th>
+              <th>Description</th>
               <th>Actions</th>
             </tr>
             <tbody>
@@ -67,12 +76,12 @@ function App() {
             ({
               id,
               name,
-              mobileNumber,
               age,
-              dob,
               emailId,
-              description,
               qualification,
+              dob,
+              mobileNumber,
+              description,
               actions
             }) => {
               return (
@@ -80,12 +89,12 @@ function App() {
                     <tr className="line">
                       <td>{id}</td>
                       <td>{name}</td>
-                      <td>{mobileNumber}</td>
                       <td>{age}</td>
-                      <td>{dob}</td>
                       <td>{emailId}</td>
-                      <td>{description}</td>
                       <td>{qualification}</td>
+                      <td>{dob}</td>
+                      <td>{mobileNumber}</td>
+                      <td>{description}</td>
                       <td>{actions}
                       <i className="view px-3">
                         <GrView/></i>
@@ -106,7 +115,7 @@ function App() {
         </table>
         <div className="container">
           <div className="d-flex p-6 py-4 justify-content-end">
-            <button className="down">Previous</button>
+            <button className="previous">Previous</button>
             <button className="one">1</button>
             <button className="two">2</button>
             <button className="three">3</button>
