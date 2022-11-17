@@ -21,7 +21,7 @@ function User() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     if (post === true) {
       console.log(details);
       axios
@@ -82,7 +82,7 @@ function User() {
       setPost(true);
     }
     if (details.description === "") {
-      errors.description = "*Please fill the description below";
+      errors.description = "*Please fill the description above";
       setPost(false);
     } else {
       setPost(true);
@@ -153,7 +153,7 @@ function User() {
                   <option>Degree</option>
                   <option>Masters</option>
                 </select>
-                <p className="text">{errors.qualification}</p>
+                <p className="text-danger">{errors.qualification}</p>
                 <label>Date of birth</label>
                 <br></br>
                 <input
@@ -162,7 +162,7 @@ function User() {
                   value={details.dob}
                   onChange={handleChange}
                 />
-                <p className="text">{errors.dob}</p>
+                <p className="text-danger">{errors.dob}</p>
               </div>
               <div className="col-md-4 term">
                 <label>Mobile Number</label> <br></br>
