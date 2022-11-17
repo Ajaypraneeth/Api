@@ -10,24 +10,22 @@ function User() {
     name: "", age: "", email: "", qualification: "", dob: "", mobileNumber: "", description: "",
   });
   const [errors, setErrors] = useState({});
-  const [view, setView] = useState(false);
+  const [post, setPost] = useState(false);
   let navigate = useNavigate();
 
   const handleChange = (e) => {
     setDetails({ ...details, [e.target.name]: e.target.value });
-    if (view === false) {
+    if (post === false) {
       setErrors(Validation(details));
     }
   };
-     console.log(parseInt(details.age));
   const handleSubmit = (e) => {
     e.preventDefault();
-
-     console.log(parseInt(details.age));
-    if (view === true) {
+    
+    if (post === true) {
       console.log(details);
       axios
-        .view(
+        .post(
           "https://636ddafeb567eed48acb07be.mockapi.io/api/v1/users",
           details
         )
@@ -47,18 +45,50 @@ function User() {
   };
   const Validation = (details) => {
     let errors = {};
-    let errorValues = Object.keys(details);
-
-    errorValues.map((value) => {
-      if (details[value] === "") {
-        errors[value] = "";
-        setView(false);
-      } else {
-        setView(true);
-      }
-    });
-    return errors;
-  };
+    if (details.name === "") {
+      errors.name = "*Please Enter your User name";
+      setPost(false);
+    } else {
+      setPost(true);
+    }
+    if (details.age === "") {
+      errors.age = "*Please Enter your age";
+      setPost(false);
+    } else {
+      setPost(true);
+    }
+    if (details.email === "") {
+      errors.email = "*Please Enter your email";
+      setPost(false);
+    } else {
+      setPost(true);
+    }
+    if (details.qualification === "") {
+      errors.qualification = "*Please choose your qualification";
+      setPost(false);
+    } else {
+      setPost(true);
+    }
+    if (details.dob === "") {
+      errors.dob = "*Please Enter your DOB";
+      setPost(false);
+    } else {
+      setPost(true);
+    }
+    if (details.mobileNumber === "") {
+      errors.mobileNumber = "*Please Enter your Mobile number";
+      setPost(false);
+    } else {
+      setPost(true);
+    }
+    if (details.description === "") {
+      errors.description = "*Please fill the description below";
+      setPost(false);
+    } else {
+      setPost(true);
+    }
+  return(errors);
+  }
   const reset = () => {
     setDetails({
       name: "", age: "", email: "", qualification: "", dob: "", mobileNumber: "", description: "",
@@ -89,7 +119,7 @@ function User() {
                   value={details.name}
                   onChange={handleChange}
                 />
-                <p className="text">{errors.name}</p>
+                <p className="text-danger">{errors.name}</p>
                 <label>Age</label> <br></br>
                 <input
                   type={"number"}
@@ -98,7 +128,7 @@ function User() {
                   value={details.age}
                   onChange={handleChange}
                 />
-                <p className="text">{errors.age}</p>
+                <p className="text-danger">{errors.age}</p>
                 <label>Email Id</label>
                 <br></br>
                 <input
@@ -108,7 +138,7 @@ function User() {
                   value={details.email}
                   onChange={handleChange}
                 />
-                <p className="text">{errors.email}</p>
+                <p className="text-danger">{errors.email}</p>
                 <label>Qualification</label>
                 <br></br>
                 <select
@@ -143,7 +173,7 @@ function User() {
                   value={details.mobileNumber}
                   onChange={handleChange}
                 />
-                <p className="text">{errors.mobileNumber}</p>
+                <p className="text-danger">{errors.mobileNumber}</p>
                 <label>Description</label> <br></br>
                 <textarea
                   name="description"
@@ -153,7 +183,7 @@ function User() {
                   value={details.description}
                   onChange={handleChange}
                 ></textarea>
-                <p className="text">{errors.description}</p>
+                <p className="text-danger">{errors.description}</p>
               </div>
               <hr></hr>
             </div>
